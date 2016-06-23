@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : fs_papersizes.xml
+    Description:
+        Estructura de la tabla fs_papersizes.
+-->
+<tabla>
+    <columna>
+        <nombre>id</nombre>
+        <tipo>serial</tipo>
+        <nulo>NO</nulo>
+    </columna>
+    <columna>
+        <nombre>descripcion</nombre>
+        <tipo>character varying(32)</tipo>
+        <nulo>NO</nulo>
+    </columna>
+    <columna>
+        <nombre>pulgadas</nombre>
+        <tipo>character varying(16)</tipo>
+        <nulo>NO</nulo>
+    </columna>
+    <columna>
+        <nombre>centimetros</nombre>
+        <tipo>character varying(16)</tipo>
+        <nulo>NO</nulo>
+    </columna>
+    <columna>
+        <nombre>ancho_pulgadas</nombre>
+        <tipo>double precision</tipo>
+        <nulo>YES</nulo>
+        <defecto>0</defecto>
+    </columna>
+    <columna>
+        <nombre>alto_pulgadas</nombre>
+        <tipo>double precision</tipo>
+        <nulo>YES</nulo>
+        <defecto>0</defecto>
+    </columna>
+    <columna>
+        <nombre>ancho_cm</nombre>
+        <tipo>double precision</tipo>
+        <nulo>YES</nulo>
+        <defecto>0</defecto>
+    </columna>
+    <columna>
+        <nombre>alto_cm</nombre>
+        <tipo>double precision</tipo>
+        <nulo>YES</nulo>
+        <defecto>0</defecto>
+    </columna>
+    <columna>
+        <nombre>estado</nombre>
+        <tipo>boolean</tipo>
+        <nulo>NO</nulo>
+    </columna>
+    <restriccion>
+        <nombre>fs_papersizes_pkey</nombre>
+        <consulta>PRIMARY KEY (id)</consulta>
+    </restriccion>
+</tabla>

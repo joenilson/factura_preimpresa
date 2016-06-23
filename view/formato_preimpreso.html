@@ -15,29 +15,29 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
+<script src="{$fsc->get_js_location('bootstrap-plugins/jquery.bootstrap.wizard.min.js')}" type="text/javascript"></script>
 <div class="container-fluid">
     <div class="row">
-        <form class="form-horizontal" action="{$fsc->url()}" enctype="multipart/form-data" method="POST">
-            <div class="form-group">
-                <label for="archivo" class="col-sm-2 control-label">Archivo muestra</label>
-                <div class="col-sm-10">
-                    <input type="file" name="archivo" id="archivo">
-                </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-sm btn-default">Nuevo Formato</button>
             </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-sm btn-default">Cargar</button>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
     <div class="row">
         {if="$fsc->resultados_w!=''"}
         Resultados:<br/>
-        <div class="alert alert-info" style="width: {$fsc->resultados_w/10}cm; position:absolute; height: {$fsc->resultados_h/10}cm;">
-            Tamaño del PDF subido: {$fsc->resultados_w}, {$fsc->resultados_h}
-        </div>
+
         {/if}
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $("#b_nuevo_formato").click(function(event) {
+            event.preventDefault();
+            $("#modal_nuevo_formato").modal('show');
+            document.f_nuevo_agente.snombre.focus();
+        });
+    });
+</script>
 {include="footer"}
